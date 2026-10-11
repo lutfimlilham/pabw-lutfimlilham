@@ -1,0 +1,93 @@
+/* Layout */
+.site-header {
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-baris {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+    max-width: 70rem;
+    margin-inline: auto;
+}
+
+nav {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav ul {
+    max-width: 70rem;
+    margin-inline: auto;
+    padding: var(--space-3) var(--space-6);
+    list-style: none;
+    display: flex;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+}
+
+main {
+    max-width: 70rem;
+    margin-inline: auto;
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--section-gap);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.katalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.kartu {
+    flex: 1 1 16rem;
+    padding: var(--card-pad);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    max-width: 20rem;
+}
+
+figcaption {
+    font-size: var(--text-sm);
+}
+
+footer {
+    padding: var(--space-6);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 40rem) {
+    .site-header,
+    main {
+        padding: var(--space-4);
+    }
+
+    nav ul {
+        padding-inline: var(--space-4);
+    }
+
+    table {
+        font-size: var(--text-sm);
+    }
+}

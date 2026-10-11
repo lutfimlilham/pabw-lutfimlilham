@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film yang Pernah Saya Tonton</title>
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/komponen.css">
+    <link rel="stylesheet" href="css/tema.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="header-baris">
+            <div>
+                <h1>Film yang Pernah Saya Tonton</h1>
+                <p>Daftar film yang pernah saya tonton beserta rating pribadi saya.</p>
+            </div>
+
+            <div class="pengalih-tema-wrap">
+                <input type="checkbox" id="tema" class="pengalih-tema">
+                <label for="tema" class="tombol-tema">Tema gelap</label>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+        <ul>
+            <li><a href="#profil-saya">Profil Saya</a></li>
+            <li><a href="#daftar-proyek">Proyek</a></li>
+            <li><a href="#daftar-film">Daftar Film</a></li>
+            <li><a href="#tambah-film">Tambah Film</a></li>
+            <li><a href="#tentang-saya">Tentang Saya</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="profil-saya">
+            <h2>Profil Saya</h2>
+            <div id="data-profil-js" class="kartu">
+                <p>Memuat data profil...</p>
+            </div>
+            <h3>Keahlian</h3>
+            <ul id="daftar-keahlian-js" class="daftar-keahlian"></ul>
+        </section>
+
+        <section id="daftar-proyek">
+            <h2>Proyek Saya</h2>
+            <div id="daftar-proyek-js" class="katalog"></div>
+        </section>
+
+        <section id="daftar-film">
+            <h2>Daftar Film</h2>
+
+            <table>
+                <caption>Daftar film yang pernah saya tonton</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Judul</th>
+                        <th scope="col">Tahun</th>
+                        <th scope="col">Sutradara</th>
+                        <th scope="col">Rating Saya</th>
+                    </tr>
+                </thead>
+
+                <tbody id="daftar-film-js">
+                </tbody>
+            </table>
+
+            <figure>
+                <img
+                    src="avengers-endgame.jpg"
+                    alt="Poster film Avengers: Endgame yang pernah saya tonton"
+                    width="300"
+                    height="450"
+                    loading="lazy"
+                >
+                <figcaption>Poster film Avengers: Endgame.</figcaption>
+            </figure>
+        </section>
+
+        <section id="tambah-film">
+            <h2>Tambah Film</h2>
+
+            <form id="form-tambah-film">
+                <div class="form-kolom">
+                    <label for="judul">Judul Film</label>
+                    <input type="text" id="judul" name="judul" required>
+                    <p class="pesan-galat">Judul film wajib diisi.</p>
+                </div>
+
+                <div class="form-kolom">
+                    <label for="tahun">Tahun</label>
+                    <input
+                        type="number"
+                        id="tahun"
+                        name="tahun"
+                        min="1900"
+                        max="2100"
+                        required
+                    >
+                    <p class="pesan-galat">Tahun film harus diisi antara 1900 dan 2100.</p>
+                </div>
+
+                <div class="form-kolom">
+                    <label for="rating">Rating</label>
+                    <input
+                        type="number"
+                        id="rating"
+                        name="rating"
+                        min="0"
+                        max="10"
+                        step="0.5"
+                        required
+                    >
+                    <p class="pesan-galat">Rating harus diisi dari 0 sampai 10.</p>
+                </div>
+
+                <button type="submit">Tambah Film</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="tentang-saya">
+        <h2>Tentang Saya</h2>
+        <p>Saya mahasiswa PABW yang sedang belajar membuat halaman web menggunakan HTML, CSS, dan JavaScript.</p>
+        <p>&copy; 2026 Film yang Pernah Saya Tonton</p>
+    </footer>
+    <script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>
